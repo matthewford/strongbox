@@ -46,7 +46,7 @@ module Strongbox
             encrypted_iv = Base64.encode64(encrypted_iv)
           end
           @instance[@symmetric_key] = encrypted_key
-          @instance.[@symmetric_iv] = encrypted_iv
+          @instance[@symmetric_iv] = encrypted_iv
         else
           ciphertext = public_key.public_encrypt(plaintext,@padding)
         end
